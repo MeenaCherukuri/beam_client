@@ -1,0 +1,1241 @@
+/* BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+  color: white !important;
+  user-select: none;
+}
+
+html,
+body {
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: scrollbar-color 0.4s ease;
+}
+
+.middle {
+  height: auto;
+  border-radius: 1.5rem;
+  padding: 0.25rem 0rem 0.25rem 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle:hover {
+  background-color: #000;
+}
+
+body:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+  transition: background-color 0.4s ease;
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+body {
+  min-height: 100vh;
+  background-image: url(background_img.png);
+  padding-top: 80px;
+}
+
+/* NAVBAR STYLES */
+.custom-navbar {
+  height: auto;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: none;
+  z-index: 1030;
+  padding: 0.5rem 1rem;
+  padding: 0 40px;
+  /* 🔹 add this (adjust 30–50px as per look) */
+}
+
+.left-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* responsive wrap */
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 1rem;
+}
+
+.nav-img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0;
+  margin-left: 80px;
+  /* 🔹 add this */
+}
+
+/* Center nav items */
+.middle {
+  height: auto;
+  border-radius: 1.5rem;
+  padding: 0.25rem 1rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.middle:hover {
+  background-color: #000;
+}
+
+.shade {
+  margin-right: 1rem;
+  border-radius: 1.5rem;
+}
+
+.shade:hover {
+  color: white;
+  background-color: #1a1a1a;
+}
+
+/* Login button styling */
+.nav-sign {
+  font-size: 0.9rem;
+  cursor: pointer;
+  background-color: navy;
+  border-radius: 1.5rem;
+  margin-right: 10px;
+  /* 🔹 add this */
+}
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#signup {
+  position: relative;
+  display: inline-block;
+  padding: 0 0.5rem 0.2rem 0.5rem;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 15px;
+  background: transparent;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.border-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: visible;
+  z-index: -1;
+}
+
+.train {
+  stroke: white;
+  stroke-width: 3;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: dashMove 3s linear infinite;
+  filter: drop-shadow(0 0 6px white);
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#content1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-it-works {
+  padding: 60px 20px;
+}
+
+.how-it-works h3 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2.2rem;
+}
+
+.content2 {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-around;
+}
+
+.step {
+  flex: 1 1 250px;
+  background-color: #1a1a1a;
+  border: 2px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.architecture {
+  min-width: 100vh;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+  margin-top: 4.4rem;
+}
+
+.architecture_img {
+  height: 50%;
+  width: 50%;
+  border-radius: 17%;
+  margin-top: 10px;
+  animation: glowBackground 2s infinite alternate;
+}
+
+@keyframes glowBackground {
+  0% {
+    box-shadow: 0 0 0 black;
+  }
+
+  100% {
+    box-shadow: 0px 0px 17px white;
+  }
+}
+
+.why-choose-us {
+  width: 100%;
+  margin: 40px 20px;
+}
+
+.why-choose-us h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.content3 {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrangement-why-choose-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.3rem;
+  flex-wrap: nowrap;
+}
+
+.sub-arrangement-why-choose-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 17rem;
+  padding: 1.3rem;
+  border: 3px solid white;
+  box-shadow: 0 0 8px white;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.sub-arrangement-why-choose-us img {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 1.5rem;
+}
+
+.sub-arrangement-why-choose-us ul {
+  list-style: disc;
+  text-align: left;
+  padding-left: 1rem;
+  margin-top: 1rem;
+  max-width: 15rem;
+}
+
+.footer {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  gap: 2rem;
+}
+
+.foot-logo {
+  height: 7rem;
+  width: 7rem;
+}
+
+.footer-team {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: -1rem;
+}
+
+.footer-team-arrangement {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Terms and Conditions */
+/* ===== Terms & Conditions Page Styles ===== */
+.terms-container {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.terms-container h1 {
+  font-size: 2.5rem;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+  color: #ffcc00;
+}
+
+.last-updated {
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', Times, serif;
+  color: #bbb;
+  margin-bottom: 20px;
+}
+
+.terms-container section {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+.terms-container h2 {
+  font-size: 1.4rem;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #ffcc00;
+}
+
+.terms-container p {
+  font-size: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* === Navbar === */
+
+/* === Hamburger Icon === */
+.hamburger-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+  /* Push to right */
+}
+
+/* === Sidebar (mobile) === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  /* hidden by default */
+  width: 250px;
+  height: 100%;
+  background-color: #111;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar img {
+  height: 45px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.sidebar ul {
+  padding-left: 0;
+}
+
+.sidebar ul li {
+  margin: 1rem 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  padding: 5px 15px;
+  transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  background: #222;
+  border-radius: 5px;
+}
+
+/* Login button inside sidebar */
+.sidebar .login-link {
+  background: #0b0b8a;
+  color: white !important;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 1rem;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.sidebar .login-link:hover {
+  background: #1a1acb;
+}
+
+/* Sidebar Close Button */
+.sidebar .close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1101;
+  /* higher than sidebar items */
+}
+
+.sidebar .close-btn:hover {
+  opacity: 0.8;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
+
+}
+
+.sidebar-logo {
+  height: 35px;
+  margin-right: auto;
+  /* adjust as needed */
+}
+
+/* ABOUT PAGE STYLING */
+/* General Page Styling */
+.about-page {
+  background-color: #000;
+  /* Black background */
+  color: #f5f5f5;
+  /* Light text */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 40px 20px;
+  line-height: 1.8;
+}
+
+/* Hero Section */
+.about-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.about-hero .highlight {
+  color: #ff9800;
+  /* Orange highlight for BEAM */
+}
+
+.about-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Section Styling */
+.about-section {
+  margin: 60px auto;
+  max-width: 900px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #ffcc00;
+  /* Golden headings */
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-section ul li {
+  margin: 12px 0;
+  padding: 10px;
+  background: #111;
+  border-left: 4px solid #ff9800;
+  border-radius: 6px;
+}
+
+/* Core Values Grid */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.value-card {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card h3 {
+  color: #ff9800;
+  margin-bottom: 10px;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(255, 152, 0, 0.3);
+}
+
+/* Edge Section */
+.about-section em {
+  color: #ff9800;
+}
+
+
+/* =========================
+   Firm Page Styles
+   ========================= */
+.firm-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  padding: 50px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.firm-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.firm-hero h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.firm-hero p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Sections */
+.firm-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.firm-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #56cadf;
+}
+
+.firm-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.firm-list li {
+  margin: 15px 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #e6e6e6;
+}
+
+/* CTA Section */
+.firm-cta {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.firm-cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #5f9fed;
+}
+
+.firm-cta p {
+  font-size: 1.05rem;
+  color: #ccc;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #3948e3;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-btn:hover {
+  background: #0a0b0b;
+  transform: scale(1.05);
+}
+
+/* Carousel - Why choose us */
+.why-choose-us .slick-slider {
+  max-width: 100%;
+  /* Allow full width */
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  /* Center the card */
+}
+
+.why-choose-us .slick-slide {
+  display: flex !important;
+  justify-content: center;
+}
+
+
+.why-choose-us .slick-prev:before,
+.why-choose-us .slick-next:before {
+  color: #fff;
+  font-size: 26px;
+}
+
+.why-choose-us .slick-dots li button:before {
+  color: #777;
+  font-size: 12px;
+}
+
+.why-choose-us .slick-dots li.slick-active button:before {
+  color: #56cadf;
+}
+
+
+/* ------------------------>Sign Up css<------------------------------------ */
+.signup-main {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-sub-main {
+  border: 2px solid #444;
+  background-color: #111;
+  border-radius: 1.5rem;
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 4.1rem;
+}
+
+.signup-logo {
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.signup-content {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.signup-content h2 {
+  margin: 0;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.signup-content h3 {
+  margin: 0;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.sign-up-mobile-number {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sign-up-mobile-number select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #111;
+  border-radius: 1.5rem;
+  color: white;
+  height: 40px;
+  width: 110px;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.sign-up-mobile-number select:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.sign-up-mobile-number select::-webkit-scrollbar {
+  width: 8px;
+  transition: background-color 0.4s ease;
+}
+
+.sign-up-mobile-number select::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sign-up-mobile-number select::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+}
+
+.sign-up-mobile-number select:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.sign-up-mobile-number select:focus {
+  box-shadow: 0px 0px 7px rgba(244, 135, 76, 0.951);
+}
+
+.phone-input {
+  display: flex;
+  align-items: center;
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  height: 40px;
+  border-radius: 1.5rem;
+
+}
+
+.phone-input:hover {
+  box-shadow: 0px 0px 7px rgb(109, 97, 241);
+}
+
+.phone-input .country-code {
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.phone-input input[type="number"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+}
+
+
+/* Remove spinners */
+.phone-input input[type="number"]::-webkit-outer-spin-button,
+.phone-input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.phone-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.send-otp button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.otp-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.otp-input input[type="number"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #111;
+/* Mobile: Reduce space between Why Choose Us and Flow diagram */
+@media (max-width: 768px) {
+  .why-choose-us {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+}
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 0 0.5rem;
+  height: 40px;
+  border-radius: 1.5rem;
+}
+
+.otp-input input[type="number"]::-webkit-outer-spin-button,
+.otp-input input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.otp-input input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.signup-account {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.msg-success {
+  color: #198754 !important;
+}
+
+.msg-error {
+  color: #dc3545 !important;
+}
+
+
+/* -------------->UserIDetailsCollection<------------------- */
+.UserIDetailsCollection-main {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.UserIDetailsCollection-sub {
+  border: 2px solid #444;
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  background-color: #111;
+}
+
+.UserIDetailsCollection-logo {
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.UserIDetailsCollection-content {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.UserIDetailsCollection-content h2 {
+  margin: 0;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.UserIDetailsCollection-content h3 {
+  margin: 0;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.UserIDetailsCollection-data-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-self: center;
+}
+
+.UserIDetailsCollection-data-collection input[type="number"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/* Remove spinners */
+.UserIDetailsCollection-data-collection input[type="number"]::-webkit-outer-spin-button,
+.UserIDetailsCollection-data-collection input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.UserIDetailsCollection-data-collection input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.UserIDetailsCollection-data-collection select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #111;
+  border-radius: 1.5rem;
+  color: white;
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.UserIDetailsCollection-data-collection select:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.UserIDetailsCollection-data-collection select::-webkit-scrollbar {
+  width: 8px;
+  transition: background-color 0.4s ease;
+}
+
+.UserIDetailsCollection-data-collection select::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.UserIDetailsCollection-data-collection select::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+}
+
+.UserIDetailsCollection-data-collection select:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.UserIDetailsCollection-data-collection input[type="text"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.UserIDetailsCollection-data-collection input[type="password"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.UserIDetailsCollection-submit button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.msg-success {
+  color: #198754 !important;
+}
+
+/* green */
+.msg-error {
+  color: #dc3545 !important;
+}
+
+/* red */
+
+
+/*-----------------------> Login css <------------------- */
+.login-main {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-sub {
+  border: 2px solid #444;
+  display: inline-block;
+  padding: 1rem;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
+  margin-bottom: 1rem;
+  border-radius: 1.5rem;
+  background-color: #111;
+}
+
+.login-logo {
+  height: 7rem;
+  width: 7rem;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.login-content {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+.login-content h2 {
+  margin: 0;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.login-content h3 {
+  margin: 0;
+  font-weight: 400;
+  padding-bottom: 0.5rem;
+}
+
+.login-data-collection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  justify-self: center;
+}
+
+.login-data-collection select {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background-color: #111;
+  border-radius: 1.5rem;
+  color: white;
+  height: 40px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.login-data-collection select:hover {
+  scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
+}
+
+.login-data-collection select::-webkit-scrollbar {
+  width: 8px;
+  transition: background-color 0.4s ease;
+}
+
+.login-data-collection select::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.login-data-collection select::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 4px;
+  transition: background-color 0.4s ease;
+}
+
+.login-data-collection select:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login-data-collection input[type="text"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.login-data-collection input[type="password"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.login-submit button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+  height: 100%;
+  font-size: 1rem;
+  border: 1px solid #444;
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  border-radius: 1.5rem;
+  margin: 1rem;
+}
+
+.login-account {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.msg-success {
+  color: #198754 !important;
+}
+
+/* green */
+.msg-error {
+  color: #dc3545 !important;
+}
+
+/* red */
+
+
+/* ---------------------BEAM Navbar----------------- */
+
+.user_initial {
+  margin: -0.2rem 1rem 0 1rem;
+  padding: 0.2rem 0.7rem 0.2rem 0.7rem;
+  font-size: 1.3rem;
+  color: black !important;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.BeamNavbar-dropdown{
+  position: absolute;
+  color:black !important;
+  top: 100%;
+  background-color: #1a1a1a;
+  right: 0;
+  font-size: 1rem;
+  list-style: none;
+  padding: 0.5rem 1rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  border:2px solid grey;
+  min-width: 100px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+.BeamNavbar-dropdown Link{
+   text-decoration: none;
+}
