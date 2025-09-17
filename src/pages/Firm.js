@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../style.css";
 
 export default function Firm() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="firm-page">
       <head>

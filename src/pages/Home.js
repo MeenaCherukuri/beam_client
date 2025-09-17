@@ -141,7 +141,7 @@ export default function Home() {
                 <span>Begin your journey with BEAM now -</span>
                 <a 
                   href="/signup" 
-                  className="relative inline-block px-6 py-3 ml-2 text-white bg-blue-600 hover:bg-blue-700 rounded-2xl transition-all duration-300 transform hover:scale-105 font-medium border-2 border-white hover:border-blue-200 shadow-lg"
+                  className="md:relative md:inline-block px-2 py-3 ml-2 text-white bg-blue-600 hover:bg-blue-700 rounded-2xl transition-all duration-300 transform hover:scale-105 font-medium border-2 border-white hover:border-blue-200 shadow-lg"
                 >
                   Sign Up
                 </a>
